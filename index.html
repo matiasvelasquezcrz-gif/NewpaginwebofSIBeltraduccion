@@ -8,9 +8,9 @@
     <meta name="developer" content="Created by Matias Velasquez | Instagram: @matt_velcruzZz">
     <title>Sibel Cruz | Traductora Jurada Certificada - Guatemala</title>
     <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + JohnDoe main styles -->
-	<link rel="stylesheet" href="assets/css/johndoe.css">
+	<link rel="stylesheet" href="css/johndoe.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <header class="header">
@@ -18,7 +18,7 @@
             <ul class="social-icons pt-3">
                 <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/thebelocean" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
                 <li class="social-item"><a class="social-link text-light" href="https://wa.me/50234978423" target="_blank"><i class="ti-mobile" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://curzsibel7@gmail.com"><i class="ti-email" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="mailto:curzsibel7@gmail.com"><i class="ti-email" aria-hidden="true"></i></a></li>
             </ul>  
             <div class="header-content">
                 <h4 class="header-subtitle">Hola, soy</h4>
@@ -46,7 +46,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav brand">
-                    <img src="assets/imgs/avatar.jpg" alt="Sibel Cruz Traductora" class="brand-img">
+                    <img src="imgs/avatar.jpg" alt="Sibel Cruz Traductora" class="brand-img">
                     <li class="brand-txt">
                         <h5 class="brand-title">Sibel Cruz</h5>
                         <div class="brand-subtitle">Traductora Jurada</div>
@@ -84,7 +84,7 @@
                 </ul>
                 <ul class="social-icons pt-3">
                     <li class="social-item"><a class="social-link" href="https://www.instagram.com/thebelocean" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://curzsibel7@gmail.com"><i class="ti-email" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="mailto:curzsibel7@gmail.com"><i class="ti-email" aria-hidden="true"></i></a></li>
                     <li class="social-item"><a class="social-link" href="https://wa.me/50234978423" target="_blank"><i class="ti-mobile" aria-hidden="true"></i></a></li>
                 </ul>  
             </div>
@@ -345,7 +345,6 @@
         </div>
     </section>
 
-
     <section class="section bg-dark py-5">
         <div class="container text-center">
             <h2 class="text-light mb-5 font-weight-normal">¿Necesitas una Traducción Certificada? Cotiza tu documento ya</h2>
@@ -408,32 +407,59 @@
                             <li class="social-item"><a class="social-link text-dark" href="mailto:curzsibel7@gmail.com"><i class="ti-email" aria-hidden="true"></i></a></li>
                             <li class="social-item"><a class="social-link text-dark" href="https://wa.me/50234978423" target="_blank"><i class="ti-mobile" aria-hidden="true"></i></a></li>
                         </ul>
-                        <!-- WhatsApp Form Script -->
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Obtener valores del formulario
-        var nombre = document.getElementById('nombre').value;
-        var email = document.getElementById('email').value;
-        var mensaje = document.getElementById('mensaje').value;
-        
-        // Crear mensaje para WhatsApp
-        var whatsappMessage = 
-            'Hola Sibel, te contacto desde tu página web.%0A%0A' +
-            '📋 *Mis datos:*%0A' +
-            'Nombre: ' + nombre + '%0A' +
-            'Email: ' + email + '%0A%0A' +
-            '📝 *Mi consulta:*%0A' + mensaje;
-        
-        // Número de WhatsApp (incluye código de país)
-        var phoneNumber = '50234978423';
-        
-        // Abrir WhatsApp
-        var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + whatsappMessage;
-        window.open(whatsappURL, '_blank');
-        
-        // Limpiar formulario
-        document.getElementById('contactForm').reset();
-    });
-</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer py-3">
+        <div class="container">
+            <p class="small mb-0 text-light">
+                &copy; <script>document.write(new Date().getFullYear())</script> Sibel Cruz - Traductora Jurada Certificada | Desarrollado por <a href="https://www.instagram.com/matt_velcruzZz" target="_blank">Matias Velasquez</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Form Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+            
+            var whatsappMessage = 
+                'Hola Sibel, te contacto desde tu página web.%0A%0A' +
+                '📋 *Mis datos:*%0A' +
+                'Nombre: ' + nombre + '%0A' +
+                'Email: ' + email + '%0A%0A' +
+                '📝 *Mi consulta:*%0A' + mensaje;
+            
+            var phoneNumber = '50234978423';
+            var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + whatsappMessage;
+            window.open(whatsappURL, '_blank');
+            
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+
+    <!-- core -->
+    <script src="vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="vendors/isotope/isotope.pkgd.js"></script>
+    
+    <!-- Google maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+
+    <!-- JohnDoe js -->
+    <script src="js/johndoe.js"></script>
+
+</body>
+</html>
